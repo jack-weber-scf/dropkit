@@ -1,0 +1,23 @@
+{
+  "id": "api-contract",
+  "name": "API Contract Generator",
+  "version": "1.0.0",
+  "description": "Generate OpenAPI 3.1 contracts from natural language descriptions, existing code, or database schemas.",
+  "category": "contracts",
+  "tags": ["openapi", "asyncapi", "rest", "api", "contract", "swagger", "schema"],
+  "author": "dropkit",
+  "license": "MIT",
+  "deps": { "npm": [] },
+  "input": {
+    "arguments": "natural language description, or path to source code / SQL file",
+    "fileTypes": [".md", ".txt", ".sql", ".ts", ".py", ".java"]
+  },
+  "output": {
+    "fileTypes": [".yaml", ".json"]
+  },
+  "targets": {
+    "claude-code": { "file": "overrides/claude-code.md" },
+    "kiro": { "file": "overrides/kiro.md" },
+    "default": { "file": "skill.md" }
+  }
+}
